@@ -26,7 +26,6 @@ import androidx.window.layout.DisplayFeature
 import androidx.window.layout.FoldingFeature
 import com.aldikitta.adaptivelayout.ui.navigation.*
 import com.aldikitta.adaptivelayout.ui.screens.inbox.InboxScreen
-import com.aldikitta.adaptivelayout.ui.screens.inbox.InboxScreen2
 import com.aldikitta.adaptivelayout.ui.screens.inbox.InboxViewModel
 import com.aldikitta.adaptivelayout.ui.util.*
 import kotlinx.coroutines.launch
@@ -236,7 +235,7 @@ fun AdaptiveNavHost(
         startDestination = AdaptiveRoute.INBOX
     ) {
         composable(AdaptiveRoute.INBOX) {
-            InboxScreen2(
+            InboxScreen(
                 contentType = contentType,
                 navigationType = navigationType,
                 displayFeatures = displayFeatures,

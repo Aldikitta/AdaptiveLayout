@@ -1,37 +1,27 @@
 package com.aldikitta.adaptivelayout.ui.screens.inbox
 
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LargeFloatingActionButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavHostController
 import androidx.window.layout.DisplayFeature
-import com.aldikitta.adaptivelayout.data.Email
-import com.aldikitta.adaptivelayout.ui.composable.AdaptiveListDetailAppBar
-import com.aldikitta.adaptivelayout.ui.composable.AdaptiveSearchBar
-import com.aldikitta.adaptivelayout.ui.composable.ReplyEmailListItem
-import com.aldikitta.adaptivelayout.ui.composable.ReplyEmailThreadItem
+import com.aldikitta.adaptivelayout.ui.screens.inbox.first_pane.ReplyEmailList
+import com.aldikitta.adaptivelayout.ui.screens.inbox.second_pane.ReplyEmailDetail
 import com.aldikitta.adaptivelayout.ui.util.AdaptiveContentType
 import com.aldikitta.adaptivelayout.ui.util.AdaptiveNavigationType
 import com.google.accompanist.adaptive.HorizontalTwoPaneStrategy
@@ -39,14 +29,14 @@ import com.google.accompanist.adaptive.TwoPane
 
 @OptIn(ExperimentalLifecycleComposeApi::class)
 @Composable
-fun InboxScreen2(
+fun InboxScreen(
     contentType: AdaptiveContentType,
     displayFeatures: List<DisplayFeature>,
     navigationType: AdaptiveNavigationType,
     inboxViewModel: InboxViewModel = viewModel()
 ) {
     val replyHomeUIState by inboxViewModel.uiState.collectAsStateWithLifecycle()
-    InboxScreen(
+    InboxScreenContent(
         contentType = contentType,
         replyHomeUIState = replyHomeUIState,
         navigationType = navigationType,
@@ -62,7 +52,7 @@ fun InboxScreen2(
 
 
 @Composable
-fun InboxScreen(
+fun InboxScreenContent(
     contentType: AdaptiveContentType,
     replyHomeUIState: InboxUiState,
     navigationType: AdaptiveNavigationType,
@@ -154,47 +144,5 @@ fun ReplySinglePaneContent(
             modifier = modifier,
             navigateToDetail = navigateToDetail
         )
-    }
-}
-
-@Composable
-fun ReplyEmailList(
-    emails: List<Email>,
-    emailLazyListState: LazyListState,
-    modifier: Modifier = Modifier,
-    navigateToDetail: (Long, AdaptiveContentType) -> Unit
-) {
-    LazyColumn(modifier = modifier, state = emailLazyListState) {
-        item {
-            AdaptiveSearchBar(modifier = Modifier.fillMaxWidth())
-        }
-        items(items = emails, key = { it.id }) { email ->
-            ReplyEmailListItem(email = email) { emailId ->
-                navigateToDetail(emailId, AdaptiveContentType.SINGLE_PANE)
-            }
-        }
-    }
-}
-
-@Composable
-fun ReplyEmailDetail(
-    email: Email,
-    isFullScreen: Boolean = true,
-    modifier: Modifier = Modifier.fillMaxSize(),
-    onBackPressed: () -> Unit = {}
-) {
-    LazyColumn(
-        modifier = modifier
-            .background(MaterialTheme.colorScheme.inverseOnSurface)
-            .padding(top = 16.dp)
-    ) {
-        item {
-            AdaptiveListDetailAppBar(email, isFullScreen) {
-                onBackPressed()
-            }
-        }
-        items(items = email.threads, key = { it.id }) { email ->
-            ReplyEmailThreadItem(email = email)
-        }
     }
 }
