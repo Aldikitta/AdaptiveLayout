@@ -45,7 +45,6 @@ fun InboxScreen2(
     navigationType: AdaptiveNavigationType,
     inboxViewModel: InboxViewModel = viewModel()
 ) {
-//    val inboxViewModel: InboxViewModel = viewModel()
     val replyHomeUIState by inboxViewModel.uiState.collectAsStateWithLifecycle()
     InboxScreen(
         contentType = contentType,
@@ -114,7 +113,7 @@ fun InboxScreen(
             )
             // When we have bottom navigation we show FAB at the bottom end.
             if (navigationType == AdaptiveNavigationType.BOTTOM_NAVIGATION) {
-                LargeFloatingActionButton(
+                FloatingActionButton(
                     onClick = { /*TODO*/ },
                     modifier = Modifier
                         .align(Alignment.BottomEnd)

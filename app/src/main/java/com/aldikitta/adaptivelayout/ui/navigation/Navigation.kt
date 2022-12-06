@@ -153,7 +153,7 @@ fun AdaptiveNavigationWrapper(
             navigateToTopLevelDestination = navigationActionEvent::navigateTo,
             onDrawerClicked = {
                 scope.launch {
-                    drawerState.open()
+                    drawerState.close()
                 }
             },
             drawerState = drawerState,

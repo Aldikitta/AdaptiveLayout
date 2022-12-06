@@ -17,7 +17,7 @@ data class AdaptiveTopLevelDestination(
     val route: String,
     val selectedIcon: ImageVector,
     val unSelectedIcon: ImageVector,
-    val iconTextId: Int
+    val iconTextId: Int,
 )
 
 class NavigationActionEvent(
@@ -45,12 +45,12 @@ val TOP_LEVEL_DESTINATIONS = listOf(
         route = AdaptiveRoute.INBOX,
         selectedIcon = Icons.Default.Inbox,
         unSelectedIcon = Icons.Default.Inbox,
-        iconTextId = R.string.tab_inbox
+        iconTextId = R.string.tab_inbox,
     ),
     AdaptiveTopLevelDestination(
         route = AdaptiveRoute.ARTICLES,
         selectedIcon = Icons.Default.Article,
         unSelectedIcon = Icons.Default.Article,
-        iconTextId = R.string.tab_article
+        iconTextId = R.string.tab_article,
     ),
 )

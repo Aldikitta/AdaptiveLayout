@@ -11,4 +11,6 @@
     <string name="edit">Edit</string>
     <string name="reply">Reply</string>
     <string name="reply_all">Reply all</string>
+    <string name="navigation_drawer">Nav_drawer</string>
+    <string name="compose">New message</string>
 </resources>
