@@ -1,9 +1,9 @@
-package com.aldikitta.adaptivelayout.data.local
+package com.aldikitta.adaptivelayout.data.local.email
 
 import com.aldikitta.adaptivelayout.R
-import com.aldikitta.adaptivelayout.data.Email
-import com.aldikitta.adaptivelayout.data.EmailAttachment
-import com.aldikitta.adaptivelayout.data.MailboxType
+import com.aldikitta.adaptivelayout.data.model.Email
+import com.aldikitta.adaptivelayout.data.model.EmailAttachment
+import com.aldikitta.adaptivelayout.data.model.MailboxType
 
 /**
  * A static data store of [Email]s.

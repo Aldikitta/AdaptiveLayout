@@ -1,6 +1,5 @@
 package com.aldikitta.adaptivelayout.ui.navigation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
@@ -11,24 +10,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.Layout
-import androidx.compose.ui.layout.Measurable
-import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.offset
 import com.aldikitta.adaptivelayout.R
-import com.aldikitta.adaptivelayout.ui.util.AdaptiveNavigationContentPosition
-
-enum class LayoutType {
-    HEADER, CONTENT
-}
 
 @Composable
 fun AdaptiveNavigationRail(
     selectedDestination: String,
-    navigationRailContentPosition: AdaptiveNavigationContentPosition,
     navigateToTopLevelDestination: (AdaptiveTopLevelDestination) -> Unit,
     onDrawerClicked: () -> Unit = {}
 ) {
@@ -54,7 +43,7 @@ fun AdaptiveNavigationRail(
             ) {
                 Icon(
                     imageVector = Icons.Default.Edit,
-                    contentDescription = stringResource(id = com.aldikitta.adaptivelayout.R.string.edit),
+                    contentDescription = stringResource(id = R.string.edit),
                 )
             }
         }
@@ -84,7 +73,7 @@ fun AdaptiveNavigationBar(
     selectedDestination: String,
     navigateToTopLevelDestination: (AdaptiveTopLevelDestination) -> Unit,
 ) {
-    NavigationBar() {
+    NavigationBar {
         TOP_LEVEL_DESTINATIONS.forEachIndexed { _, adaptiveTopLevelDestination ->
             NavigationBarItem(
                 selected = selectedDestination == adaptiveTopLevelDestination.route,
@@ -104,7 +93,6 @@ fun AdaptiveNavigationBar(
 @Composable
 fun AdaptivePermanentDrawerContent(
     selectedDestination: String,
-    navigationDrawerContentPosition: AdaptiveNavigationContentPosition,
     navigateToTopLevelDestination: (AdaptiveTopLevelDestination) -> Unit,
     content: @Composable () -> Unit = {}
 ) {
@@ -171,7 +159,6 @@ fun AdaptivePermanentDrawerContent(
 @Composable
 fun AdaptiveModalDrawerContent(
     selectedDestination: String,
-    navigationDrawerContentPosition: AdaptiveNavigationContentPosition,
     navigateToTopLevelDestination: (AdaptiveTopLevelDestination) -> Unit,
     onDrawerClicked: () -> Unit = {},
     drawerState: DrawerState,

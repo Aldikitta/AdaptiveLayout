@@ -1,4 +1,4 @@
-package com.aldikitta.adaptivelayout.data
+package com.aldikitta.adaptivelayout.data.model
 
 import androidx.annotation.DrawableRes
 

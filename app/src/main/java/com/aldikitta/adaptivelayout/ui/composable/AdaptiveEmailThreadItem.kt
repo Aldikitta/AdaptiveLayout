@@ -24,8 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.aldikitta.adaptivelayout.R
-import com.aldikitta.adaptivelayout.data.Email
-import com.aldikitta.adaptivelayout.ui.composable.AdaptiveProfileImage
+import com.aldikitta.adaptivelayout.data.model.Email
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

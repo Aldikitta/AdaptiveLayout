@@ -6,7 +6,7 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.aldikitta.adaptivelayout.data.Email
+import com.aldikitta.adaptivelayout.data.model.Email
 import com.aldikitta.adaptivelayout.ui.composable.AdaptiveSearchBar
 import com.aldikitta.adaptivelayout.ui.composable.ReplyEmailListItem
 import com.aldikitta.adaptivelayout.ui.util.AdaptiveContentType

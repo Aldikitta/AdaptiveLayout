@@ -1,7 +1,7 @@
-package com.aldikitta.adaptivelayout.data.local
+package com.aldikitta.adaptivelayout.data.local.email
 
 import com.aldikitta.adaptivelayout.R
-import com.aldikitta.adaptivelayout.data.Account
+import com.aldikitta.adaptivelayout.data.model.Account
 
 
 /**

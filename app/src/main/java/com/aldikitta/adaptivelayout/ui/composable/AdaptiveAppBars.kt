@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.aldikitta.adaptivelayout.R
-import com.aldikitta.adaptivelayout.data.Email
+import com.aldikitta.adaptivelayout.data.model.Email
 
 @Composable
 fun AdaptiveSearchBar(

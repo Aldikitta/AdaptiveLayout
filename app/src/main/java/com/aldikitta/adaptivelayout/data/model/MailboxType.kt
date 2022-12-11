@@ -1,4 +1,4 @@
-package com.aldikitta.adaptivelayout.data
+package com.aldikitta.adaptivelayout.data.model
 
 /**
  * An enum class to define different types of email folders or categories.

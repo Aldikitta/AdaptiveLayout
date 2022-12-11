@@ -1,5 +1,7 @@
-package com.aldikitta.adaptivelayout.data
+package com.aldikitta.adaptivelayout.data.repository
 
+import com.aldikitta.adaptivelayout.data.model.Email
+import com.aldikitta.adaptivelayout.data.model.MailboxType
 import kotlinx.coroutines.flow.Flow
 
 /**

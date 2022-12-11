@@ -1,6 +1,7 @@
-package com.aldikitta.adaptivelayout.data
+package com.aldikitta.adaptivelayout.data.repository
 
-import com.aldikitta.adaptivelayout.data.local.LocalAccountsDataProvider
+import com.aldikitta.adaptivelayout.data.model.Account
+import com.aldikitta.adaptivelayout.data.local.email.LocalAccountsDataProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

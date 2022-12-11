@@ -60,7 +60,6 @@ fun InboxScreenContent(
     closeDetailScreen: () -> Unit,
     navigateToDetail: (Long, AdaptiveContentType) -> Unit,
     modifier: Modifier = Modifier,
-    inboxViewModel: InboxViewModel = viewModel()
 ) {
 //    val replyHomeUIState by inboxViewModel.uiState.collectAsStateWithLifecycle(InboxUiState())
     /**

@@ -1,5 +1,6 @@
-package com.aldikitta.adaptivelayout.data
+package com.aldikitta.adaptivelayout.data.repository
 
+import com.aldikitta.adaptivelayout.data.model.Account
 import kotlinx.coroutines.flow.Flow
 
 /**
