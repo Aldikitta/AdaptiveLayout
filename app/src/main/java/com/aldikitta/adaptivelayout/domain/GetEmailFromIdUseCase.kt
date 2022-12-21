@@ -1,7 +1,7 @@
 package com.aldikitta.adaptivelayout.domain
 
-import com.aldikitta.adaptivelayout.data.model.Email
-import com.aldikitta.adaptivelayout.data.repository.EmailsRepositoryImpl
+import com.aldikitta.data.model.Email
+import com.aldikitta.data.repository.EmailsRepositoryImpl
 import kotlinx.coroutines.flow.Flow
 
 class GetEmailFromIdUseCase(

@@ -6,8 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.window.layout.DisplayFeature
-import com.aldikitta.adaptivelayout.ui.screens.inbox.InboxScreen
-import com.aldikitta.adaptivelayout.ui.util.*
+import com.aldikitta.inbox.InboxScreen
+import com.aldikitta.mail.MailScreen
+import com.aldikitta.ui.AdaptiveContentType
+import com.aldikitta.ui.AdaptiveNavigationType
 
 @Composable
 fun AdaptiveNavHost(
@@ -30,7 +32,7 @@ fun AdaptiveNavHost(
             )
         }
         composable(AdaptiveRoute.ARTICLES) {
-
+            MailScreen()
         }
     }
 }

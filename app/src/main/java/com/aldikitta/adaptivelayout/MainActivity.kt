@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import com.aldikitta.adaptivelayout.ui.adaptive_navigation.AdaptiveNavigation
-import com.aldikitta.adaptivelayout.ui.theme.AdaptiveLayoutTheme
+import com.aldikitta.ui.theme.AdaptiveLayoutTheme
 import com.google.accompanist.adaptive.calculateDisplayFeatures
 
 class MainActivity : ComponentActivity() {
